@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 31539038430572399}
   - component: {fileID: 1987601280122920046}
   - component: {fileID: 6972197150836928126}
+  - component: {fileID: 8003240915750970149}
+  - component: {fileID: 3333565402490128301}
   m_Layer: 0
   m_Name: RegalSmooth
   m_TagString: Untagged
@@ -86,3 +88,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8003240915750970149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437433911692273566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e73f83c7a279c49a5af11162730af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _placer: {fileID: 423998094700369403, guid: 5d60fe132f9f75f47a9a99c79edeb923, type: 3}
+  _placerDistance: 0.1
+--- !u!64 &3333565402490128301
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437433911692273566}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5435717471239201326, guid: 07d52f5666c32614faa733197a4f2f9e, type: 3}

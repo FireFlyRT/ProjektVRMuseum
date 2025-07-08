@@ -27,6 +27,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         // TEST:
-        ExportTexture.ExportRenderTexture(_textureToExport);
+        //ExportTexture.ExportRenderTexture(_textureToExport);
     }
 }

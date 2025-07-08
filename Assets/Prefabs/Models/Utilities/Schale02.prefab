@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5921679683839668542}
   - component: {fileID: 5197184511764316551}
   - component: {fileID: 9003486691519852543}
+  - component: {fileID: 5575295066476015609}
   m_Layer: 0
   m_Name: Schale02
   m_TagString: Untagged
@@ -110,7 +111,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1603392720666953742, guid: dcae2668f08f6e14fb5ea9fcadabe131, type: 3}
+  m_Mesh: {fileID: 1603392720666953742, guid: 52f65155730c2e744b31a8fb53c1526d, type: 3}
 --- !u!54 &5197184511764316551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -260,3 +261,15 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &5575295066476015609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963299920278403392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8984e352cc22f94a9a9059c5437b229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

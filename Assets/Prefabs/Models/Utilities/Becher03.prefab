@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4029488668618416396}
   - component: {fileID: 227901593894399653}
   - component: {fileID: 400014458231560201}
+  - component: {fileID: 8184014868691495766}
   m_Layer: 0
   m_Name: Becher03
   m_TagString: Untagged
@@ -108,9 +109,9 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -8592033937187738626, guid: 7cc166a0f1e03174092049305478d76a, type: 3}
+  m_Mesh: {fileID: -8592033937187738626, guid: 6e6d4d9b02adcc447a7ba5c642265cd6, type: 3}
 --- !u!54 &227901593894399653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -260,3 +261,15 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &8184014868691495766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3843853684654509005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8984e352cc22f94a9a9059c5437b229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
