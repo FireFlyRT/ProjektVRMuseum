@@ -8,7 +8,6 @@ public class TeleportButton : MonoBehaviour
     [SerializeField]
     private float _triggerPoint;
 
-    [SerializeField]
     private PlayerController _playerController;
     private Vector3 _startPosition;
 
@@ -17,12 +16,25 @@ public class TeleportButton : MonoBehaviour
         _startPosition = transform.position;
     }
 
-    public void OnClick()
+    private void Update()
+    {
+        if (transform.position.x - _startPosition.x >= _triggerPoint)
+            if (_playerController != null)
+                OnClick(_playerController);
+    }
+
+    private void OnClick(IInteractor sender)
     {
         if (_teleportationPlace == null) 
             return;
 
-        _playerController.TeleportTo(_teleportationPlace);
+        sender.TeleportTo(_teleportationPlace);
         transform.position = _startPosition;
+        _playerController = null;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _playerController = collision.transform.gameObject.GetComponentInParent<PlayerController>();
     }
 }
