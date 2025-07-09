@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class XRController : MonoBehaviour
@@ -53,6 +54,9 @@ public class XRController : MonoBehaviour
         XRRayInteractor interactor = GetComponentInChildren<XRRayInteractor>();
 
         if (interactor != null)
+        {
             GameManager.Instance.SelectedObject = interactor.firstInteractableSelected.transform.gameObject;
+            GameManager.Instance.SelectedObject.GetComponent<XRGrabInteractable>().interactionLayers = GameManager.Instance.SocketActiveLayer;
+        }
     }
 }

@@ -2151,6 +2151,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2383251360567761301, guid: 987122d2ed11f504793a9b5677e4e21a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483649
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496490697567536414, guid: 987122d2ed11f504793a9b5677e4e21a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483649
+      objectReference: {fileID: 0}
     - target: {fileID: 2554584336930306264, guid: 987122d2ed11f504793a9b5677e4e21a, type: 3}
       propertyPath: m_LeftHandMoveAction.m_Reference
       value: 
@@ -45908,6 +45916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triggerInputAction: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   _grabInputAction: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  SocketActiveLayer:
+    m_Bits: 2147483648
   _textureToExport: {fileID: 8400000, guid: 1dd4b038e005f3f41b11bd82f8ce4136, type: 2}
 --- !u!4 &1895201625
 Transform:

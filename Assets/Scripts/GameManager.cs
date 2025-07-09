@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     public InputActionReference GrabInputAction { get => _grabInputAction; set => _grabInputAction = value; }
     [SerializeField]
     private InputActionReference _grabInputAction;
+
+    public InteractionLayerMask SocketActiveLayer;
 
     public RenderTexture TextureToExport { get => _textureToExport; }
     [SerializeField]

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -20,8 +21,7 @@ public class SocketPlacer : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (ObjectForSocket == other.gameObject)
-            if (_socketInteractor.interactionLayers == -1 || 
-                other.gameObject.layer == _socketInteractor.interactionLayers)
+            if (ObjectForSocket.GetComponent<XRGrabInteractable>().interactionLayers.value == _socketInteractor.interactionLayers.value)
             {
                 _socketInteractor.enabled = true;
                 _socketInteractor.hoverExited.AddListener(OnHoverExited);
@@ -38,6 +38,14 @@ public class SocketPlacer : MonoBehaviour
     public void OnControllerTriggerExit()
     {
         _socketInteractor.GetComponent<XRSocketInteractor>().showInteractableHoverMeshes = false;
+        StartCoroutine(nameof(ResetObject));
+    }
+
+    private IEnumerator ResetObject()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        ObjectForSocket.GetComponent<XRGrabInteractable>().interactionLayers = 1;
         DestroyObject();
     }
 

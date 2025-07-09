@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class AttachSocketController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class AttachSocketController : MonoBehaviour
         SocketPlacer socket = null;
         if (Vector3.Distance(_lastPosition, position) > _placerDistance)
         {
+            objectForSocket.GetComponent<XRGrabInteractable>().interactionLayers = GameManager.Instance.SocketActiveLayer;
             socket = Instantiate(_placer, position, rotation, transform).GetComponent<SocketPlacer>();
             socket.ObjectForSocket = objectForSocket;
             _lastPosition = position;
