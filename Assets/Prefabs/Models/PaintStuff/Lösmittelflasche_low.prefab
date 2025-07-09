@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7590542002468070481}
   - component: {fileID: 8121191462862456523}
   - component: {fileID: 1610142707721888595}
-  - component: {fileID: 5850438950648563593}
-  - component: {fileID: 6632522981299416107}
+  - component: {fileID: 1091679736078128347}
+  - component: {fileID: 1186627930723154441}
+  - component: {fileID: 6739191064148242346}
   m_Layer: 0
   m_Name: "L\xF6smittelflasche_low"
   m_TagString: Untagged
@@ -109,7 +110,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3810724528987348769, guid: 76a19c8312ff494468b530b2812ecb58, type: 3}
 --- !u!114 &1610142707721888595
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8984e352cc22f94a9a9059c5437b229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &5850438950648563593
+--- !u!54 &1091679736078128347
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,11 +148,11 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6632522981299416107
+--- !u!114 &1186627930723154441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,3 +274,15 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &6739191064148242346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8325347598941219242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8984e352cc22f94a9a9059c5437b229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

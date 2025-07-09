@@ -23,7 +23,7 @@ public class XRController : MonoBehaviour
             GameManager.Instance.IsTriggerActive = false;
             SocketPlacer[] sockets = FindObjectsByType<SocketPlacer>(FindObjectsSortMode.None);
             foreach (SocketPlacer socket in sockets)
-                socket.OnControllerTriggerExit();
+                socket?.OnControllerTriggerExit();
         }
 
 #if DEBUG

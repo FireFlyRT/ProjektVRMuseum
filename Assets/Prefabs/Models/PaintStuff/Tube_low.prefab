@@ -109,9 +109,9 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -1398570678281283349, guid: 4e0f3fce533c3d74f9d660cb6fbfd8cf, type: 3}
+  m_Mesh: {fileID: -1398570678281283349, guid: a1f5d19da1be73c4c879eb0bfe96e670, type: 3}
 --- !u!54 &7007930283761525881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
