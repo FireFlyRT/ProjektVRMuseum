@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private bool _isTriggerActive;
 
     public static GameManager Instance { get; private set; }
+    public GameObject SelectedObject { get; internal set; }
 
     public void Awake()
     {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class XRController : MonoBehaviour
 {
@@ -12,11 +13,14 @@ public class XRController : MonoBehaviour
     private void OnGrabCanceled(InputAction.CallbackContext context)
     {
         GameManager.Instance.IsTriggerActive = false;
+        GameManager.Instance.SelectedObject = null;
     }
 
     private void OnTriggerPerformed(InputAction.CallbackContext context)
     {
-        if (GetComponentInChildren<RayInteractions>().HasObjectInHand)
+        GameManager.Instance.SelectedObject = GetComponentInChildren<XRRayInteractor>().firstInteractableSelected.transform.gameObject;
+
+        if (GetComponentInChildren<RayInteractions>().HasObjectInHand && GameManager.Instance.SelectedObject != null)
             GameManager.Instance.IsTriggerActive = !GameManager.Instance.IsTriggerActive;
         else
         {

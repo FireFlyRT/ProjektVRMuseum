@@ -6,9 +6,9 @@ public class PlacableObject : MonoBehaviour
     private void OnCollision(Collision collision)
     {
         var controller = collision.gameObject.GetComponent<AttachSocketController>();
-        if (controller != null & GameManager.Instance.IsTriggerActive & socket == null)
+        if (controller != null & GameManager.Instance.IsTriggerActive & GameManager.Instance.SelectedObject == gameObject & socket == null)
         {
-            socket = controller.InstatiateSocket(collision.contacts[0].point, transform.rotation);
+            socket = controller.InstatiateSocket(collision.gameObject, collision.contacts[0].point, transform.rotation);
             if (socket != null)
                 socket.SocketDestroyEvent += OnSocketDestroy;
         }

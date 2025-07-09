@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 public class SocketPlacer : MonoBehaviour
 {
     public UnityAction SocketDestroyEvent;
+    public GameObject ObjectForSocket;
     private XRSocketInteractor _socketInteractor;
 
     public void Awake()
@@ -17,19 +18,20 @@ public class SocketPlacer : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (_socketInteractor.interactionLayers == -1 || other.gameObject.layer == _socketInteractor.interactionLayers)
-        {
-            _socketInteractor.enabled = true;
-            _socketInteractor.hoverExited.AddListener(OnHoverExited);
-        }
+        if (ObjectForSocket == null || ObjectForSocket != other.gameObject)
+            if (_socketInteractor.interactionLayers == -1 || 
+                other.gameObject.layer == _socketInteractor.interactionLayers)
+            {
+                _socketInteractor.enabled = true;
+                _socketInteractor.hoverExited.AddListener(OnHoverExited);
+            }
     }
 
     public void OnHoverExited(HoverExitEventArgs args) 
     {
-        if ( _socketInteractor.interactionLayers == -1/* || gameObject.layer == _socketInteractor.interactionLayers*/)
-        {
-            DestroyObject();
-        }
+        if (ObjectForSocket != null || ObjectForSocket == args.interactorObject.transform.gameObject)
+            if ( _socketInteractor.interactionLayers == -1/* || gameObject.layer == _socketInteractor.interactionLayers*/)
+                DestroyObject();
     }
 
     public void OnControllerTriggerExit()
