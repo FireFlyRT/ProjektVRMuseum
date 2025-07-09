@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 [RequireComponent(typeof(XRSocketInteractor))]
@@ -18,7 +19,7 @@ public class SocketPlacer : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (ObjectForSocket == null || ObjectForSocket != other.gameObject)
+        if (ObjectForSocket == other.gameObject)
             if (_socketInteractor.interactionLayers == -1 || 
                 other.gameObject.layer == _socketInteractor.interactionLayers)
             {
@@ -29,20 +30,21 @@ public class SocketPlacer : MonoBehaviour
 
     public void OnHoverExited(HoverExitEventArgs args) 
     {
-        if (ObjectForSocket != null || ObjectForSocket == args.interactorObject.transform.gameObject)
+        if (ObjectForSocket != null && ObjectForSocket == GameManager.Instance.SelectedObject)
             if ( _socketInteractor.interactionLayers == -1/* || gameObject.layer == _socketInteractor.interactionLayers*/)
                 DestroyObject();
     }
 
     public void OnControllerTriggerExit()
     {
+        _socketInteractor.GetComponent<XRSocketInteractor>().showInteractableHoverMeshes = false;
         DestroyObject();
     }
 
     private void DestroyObject()
     {
-        SocketDestroyEvent?.Invoke();
         _socketInteractor.enabled = false;
+        SocketDestroyEvent?.Invoke();
         Destroy(gameObject);
     }
 }
