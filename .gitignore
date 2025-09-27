@@ -125,3 +125,5 @@ crashlytics-build.properties
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
+Assets/Video/Museum_Tutorial_1080pHD_V3.mp4
+Assets/Video/Museum_Tutorial_1080pHD_V3.mp4.meta
