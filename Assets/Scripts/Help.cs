@@ -8,6 +8,7 @@ public class Help : MonoBehaviour
     [SerializeField] private VideoClip vidClip;
     [SerializeField] private SoundPlayer sound;
     [SerializeField] private AudioSource ambientSound;
+    [SerializeField] private GameObject videoTexture;
 
     #region ButtonFunctions
     public void PlayVideo()
@@ -28,6 +29,7 @@ public class Help : MonoBehaviour
         vidPlayer.Play();
         Time.timeScale = 0.0f;
         yield return new WaitForSeconds((float)vidClip.length);
+        videoTexture.SetActive(false);
         ReactivateSound();
     }
     private void ReactivateSound()
