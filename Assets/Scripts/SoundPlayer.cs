@@ -33,7 +33,7 @@ public class SoundPlayer : MonoBehaviour
             {
                 soundsList[rndIndex].Play();
                 soundLength = soundsList[rndIndex].time;
-                Debug.Log($"Sound: {soundsList[rndIndex].clip}, is Playing: {soundsList[rndIndex].isPlaying}, Index: {rndIndex}");
+                //Debug.Log($"Sound: {soundsList[rndIndex].clip}, is Playing: {soundsList[rndIndex].isPlaying}, Index: {rndIndex}");
             }
             yield return new WaitForSeconds(soundTimer + soundLength);
 
