@@ -11,12 +11,13 @@ public class ResetOpenXRRotation : MonoBehaviour
     void Awake()
     {
         xrOrigin = GetComponent<XROrigin>();
+
     }
 
     void Start()
     {
         newWorldPosition = new Vector3(GetComponentInParent<Transform>().position.x, yPos, 
-                                       GetComponentInParent<Transform>().position.z);  
+                                       GetComponentInParent<Transform>().position.z);
         // Nach einem Frame warten, bis OpenXR Tracking aktiv ist
         // testen ob das Funzt ansonsten alternative benutzen
         StartCoroutine(ResetRotationNextFrame());
@@ -24,6 +25,8 @@ public class ResetOpenXRRotation : MonoBehaviour
         //alternative: 
         //StartCoroutine(ResetYRotationNextFrame());
     }
+
+
 
     IEnumerator ResetRotationNextFrame()
     {

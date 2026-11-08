@@ -18,7 +18,6 @@ public class ObjectChanger : MonoBehaviour
             index = 0;
 
         objPool[index].gameObject.SetActive(true);
-        Debug.Log("Test: Hingtergrund");
     }
 
     public void ObjectSetOff()
